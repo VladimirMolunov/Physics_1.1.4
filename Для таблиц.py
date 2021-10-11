@@ -1,8 +1,4 @@
 import numpy as np
-import seaborn
-import pandas
-import matplotlib
-import matplotlib.pyplot as plt
 
 inputs = open('inputs.txt', 'r')
 output = open('output.txt', 'w')

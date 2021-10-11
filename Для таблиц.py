@@ -9,11 +9,11 @@ n = 100
 N = 2 * n
 a = [0] * N
 b = [0] * n
-inp = [' '] * N
+inp = [' '] * (N + 20)
 i = 0
 while i < N:
     inp[i] = inputs.readline()
-    if inp[i] != '':
+    if inp[i] != '\n':
         a[i] = int(inp[i])
         i += 1
 

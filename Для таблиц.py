@@ -3,16 +3,23 @@ import seaborn
 import pandas
 import matplotlib
 import matplotlib.pyplot as plt
+
+inputs = open('inputs.txt', 'r')
 output = open('output.txt', 'w')
 
 asum = 0
 bsum = 0
-n = 4
+n = 100
 N = 2 * n
-a = [0] * (N)
+a = [0] * N
 b = [0] * n
-for i in range(0, N, 1):
-    a[i] = int(input())
+inp = [' '] * N
+i = 0
+while i < N:
+    inp[i] = inputs.readline()
+    if inp[i] != '':
+        a[i] = int(inp[i])
+        i += 1
 
 for i in range(0, n, 1):
     b[i] = a[2 * i] + a[2 * i + 1]
@@ -57,4 +64,5 @@ for i in range(0, N, 1):
     if i % int(np.sqrt(n)) == int(np.sqrt(n)) - 1:
         print('', file=output)
 
+inputs.close()
 output.close()
